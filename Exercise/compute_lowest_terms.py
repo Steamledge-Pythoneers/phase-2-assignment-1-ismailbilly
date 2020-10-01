@@ -17,8 +17,7 @@ def lowest_terms(x):
         return "Undefined"
     elif num  == 0:
         return "0"
-    #elif denom == 1:
-       # return f'("{num}{"/"}{denom}")'
+    
     # calculate the greatest common denominator
     for i in range(min(abs(num), abs(denom)), 1, -1):
             if num % i == 0 and denom % i == 0:
@@ -30,4 +29,4 @@ def lowest_terms(x):
     
     return f"{nums}/{denoms}"		
     
-#print(lowest_terms("10/5"))
+#print(lowest_terms("10/-5"))
