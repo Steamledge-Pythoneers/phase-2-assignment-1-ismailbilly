@@ -27,6 +27,5 @@ def lowest_terms(x):
     nums = num // greatest_common_denom
     denoms = denom // greatest_common_denom
     
-    return f"{nums}/{denoms}"		
+    return (f"{abs(nums)}/{abs(denoms)}" if nums < 0 and denoms < 0 else f"{nums}/{denoms}")
     
-#print(lowest_terms("10/-5"))
