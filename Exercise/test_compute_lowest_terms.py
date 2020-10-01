@@ -26,3 +26,4 @@ def test_lowest_terms_0():
 
 def test_lowest_terms_gotcha():
 	assert(lowest_terms("0/0") == "Undefined")
+

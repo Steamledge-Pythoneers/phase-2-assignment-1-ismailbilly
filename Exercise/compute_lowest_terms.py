@@ -1,15 +1,15 @@
 ## TODO: complete the function "lowest_terms" below
 #x = str(input('pls input the fraction: '))
 def lowest_terms(x):
-	#converting input x into  wo integer
-    try:
-        return float(x)
-    except ValueError:
-        n, d = x.split('/')
-        try:
-            leading, n = n.split(' ')
-        except ValueError: 
-            greatest_common_denom = 0
+	#converting input x into numerator and denominator
+    #try:
+        #return float(x)
+    #except ValueError:
+    n, d = x.split('/')
+        #try:
+            #leading, n = n.split(' ')
+        #except ValueError: 
+    greatest_common_denom = 0
     num = int(n)
     denom = int(d)
     # Testing denominator value equals zero
@@ -26,4 +26,4 @@ def lowest_terms(x):
     nums = num // greatest_common_denom
     denoms = denom // greatest_common_denom
     return (f"{abs(nums)}/{abs(denoms)}" if nums < 0 and denoms < 0 else f"{nums}/{denoms}")
-    
+    #print(lowest_terms("10/5"))
