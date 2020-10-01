@@ -10,20 +10,24 @@ def lowest_terms(x):
             leading, n = n.split(' ')
            
         except ValueError: 
-            
             greatest_common_denom = 0
     num = int(n)
     denom = int(d)
     if denom == 0:
-        #print("Division by zero")
         return "Undefined"
     elif num  == 0:
         return "0"
+    #elif denom == 1:
+       # return f'("{num}{"/"}{denom}")'
     # calculate the greatest common denominator
     for i in range(min(abs(num), abs(denom)), 1, -1):
             if num % i == 0 and denom % i == 0:
                 greatest_common_denom = i
                 break
-	# divide the fraction		
-    return f'("{num // greatest_common_denom}{"/"}{denom // greatest_common_denom}")'
-#print(lowest_terms("10/2"))
+	# divide the fraction
+    nums = num // greatest_common_denom
+    denoms = denom // greatest_common_denom
+    
+    return f"{nums}/{denoms}"		
+    
+#print(lowest_terms("10/5"))
