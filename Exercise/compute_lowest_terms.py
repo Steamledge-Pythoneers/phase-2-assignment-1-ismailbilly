@@ -17,6 +17,8 @@ def lowest_terms(x):
     if denom == 0:
         #print("Division by zero")
         return "Undefined"
+    elif num  == 0:
+        return "0"
     # calculate the greatest common denominator
     for i in range(min(abs(num), abs(denom)), 1, -1):
             if num % i == 0 and denom % i == 0:
